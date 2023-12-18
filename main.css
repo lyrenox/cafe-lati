@@ -31,7 +31,7 @@ body {
 
 h2 {
     font-weight: normal;
-    font-size: 2em;
+    font-size: clamp(1.5em, 6vw, 2em);
 }
 
 a {
@@ -65,7 +65,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1em 8%;
+    padding: clamp(0.1em, calc(5.4vw - 2.6em), 1em) 8%;
 }
 
 .mainpage-navbar {
@@ -195,7 +195,14 @@ footer {
 }
 
 @media (max-width: 680px) {
-    .navbar-top a:not(.logo) {
-        display: none
+    .navbar-top li:not(.icon) {
+        display: none;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .img-container {
+        height: 128px;
     }
 }
