@@ -65,7 +65,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: clamp(0.1em, calc(5.4vw - 2.6em), 1em) 8%;
+    padding: clamp(0.1em, calc(0.3vw + 1.5vh), 1em) 8%;
 }
 
 .mainpage-navbar {
