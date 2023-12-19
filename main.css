@@ -65,7 +65,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: clamp(0.1em, calc(0.3vw + 1.5vh), 1em) 8%;
+    padding: clamp(0.1em, calc(6.7vh - 22.3px), 1em) 8%;
 }
 
 .mainpage-navbar {
@@ -136,6 +136,44 @@ img {
     opacity: 0.5;
 }
 
+.menu {
+    width: 180px;
+    max-height: 360px;
+    border: 1px solid black;
+    position: fixed;
+    right: 0;
+    top: 96px;
+    z-index: 2;
+}
+
+.menu>ul {
+    list-style: none;
+}
+
+.menu li {
+    width: 100%;
+    font-size: 0.8em;
+    padding: 0.3em 1em;
+    background-color: white;
+}
+
+.menu li>a {
+    color: black;
+    text-decoration: none;
+}
+
+.menu li:hover {
+    background-color: dodgerblue;
+}
+
+.menu li:hover > a {
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
 header {
     height: 100vh;
     background-image: url(background.png);
@@ -147,17 +185,18 @@ header {
 }
 
 .heading {
-    width: clamp(450px, 90%, 800px);
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: row;
     background-color: rgb(255,255,255,0.4);
     border: 2px solid rgb(255,255,255,0.4);
     border-radius: 8px;
     backdrop-filter: blur(8px);
     box-shadow: 0 0 8px rgb(0, 0, 0, 0.3);
-    padding: 2em 3%;
+    padding: clamp(0.75em, 3vh, 1.5em) clamp(1em, 4vw, 2em);
+    transform: translateY(8vh);
 }
 
 .welcome-text {
@@ -165,22 +204,28 @@ header {
     color: black;
 }
 
+.title {
+    font-family: 'Homemade Apple', cursive; 
+    font-size: clamp(2em, calc(10vh), 4em);
+    transform: translateY(0.2em);
+}
+
 .welcome-text a{
     color: brown;
 }
 
 .img-container {
-    width: 256px;
-    height: 256px;
+    width: clamp(128px, 50vh, 256px);
+    height: clamp(128px, 70vh, 256px);
     display: inline-block;
     position: relative;
 }
 
 .img-container>img {
     position: absolute;
-    width: clamp(256px, 40vw, 380px);
-    right: calc(50% - 128px);
-    bottom: 0;
+    height: clamp(160px, 70vh, 320px);
+    right: 0;
+    bottom: -2vh;
     border: none;
 }
 
@@ -194,15 +239,23 @@ footer {
     background-size: 10px 10px;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 699px) {
     .navbar-top li:not(.icon) {
         display: none;
         margin-left: 0;
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 639px) {
+    .heading {
+        flex-direction: column;
+    }
+
     .img-container {
-        height: 128px;
+        display: none;
+    }
+
+    .title {
+        font-size: clamp(1.2em, calc(10vw), 4em);
     }
 }

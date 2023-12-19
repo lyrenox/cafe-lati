@@ -11,20 +11,30 @@
     <body>
         
         <nav class="navbar-top">
-            <a class="logo" href="index.html">Caf&eacute Lati</a>
+            <a class="logo" href="index.html">Café Lati</a>
             <ul>
                 <li><a href="recipes.html">Menu</a></li>
                 <li><a href="pokemon.html">Staff</a></li>
                 <li><a href="events.html">Events</a></li>
-                <li class="icon"><i class="material-symbols-outlined">menu</i></li>
+                <li class="icon"><i onclick="toggleElement('menu')" class="material-symbols-outlined">menu</i></li>
                 <li class="icon"><i id="iconName" class="material-symbols-outlined" onclick="switchTheme()">light_mode</i></li>
             </ul>
         </nav>
+            
+        <nav id="menu" class="menu hidden">
+            <ul>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="pokemon.html">List of Pok&eacute;mon</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+        </nav>
+
         <section>
             <h2>Recipes</h2>
             <p>Hmm... this page is empty. For now</p>
         </section>
         <script src="darkTheme.js"></script>
+        <script src="toggleElement.js"></script>
     </body>
 
 </html>

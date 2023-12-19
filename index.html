@@ -16,8 +16,16 @@
                 <li><a href="recipes.html">Menu</a></li>
                 <li><a href="pokemon.html">Staff</a></li>
                 <li><a href="events.html">Events</a></li>
-                <li class="icon"><i class="material-symbols-outlined">menu</i></li>
+                <li class="icon"><i onclick="toggleElement('menu')" class="material-symbols-outlined">menu</i></li>
                 <li class="icon"><i id="iconName" class="material-symbols-outlined" onclick="switchTheme()">light_mode</i></li>
+            </ul>
+        </nav>
+            
+        <nav id="menu" class="menu hidden">
+            <ul>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="pokemon.html">List of Pok&eacute;mon</a></li>
+                <li><a href="events.html">Events</a></li>
             </ul>
         </nav>
 
@@ -26,7 +34,7 @@
                 <div class="img-container"><img src="cafeduo.png"></div>
                 <div class="welcome-text">
                     <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8em;">welcome to</p>
-                    <h1 style="font-family: 'Homemade Apple', cursive; font-size: clamp(2em, 10vw, 4em)">Café Lati</h1>
+                    <h1 class="title">Café Lati</h1>
                     <hr style="width: 20%; margin: auto; margin-bottom: 1em; border: 1.5px solid black">
                     <p>The Pok&eacute;mon Caf&eacute; Remix information stop.</p><br>
                     <p style="font-size: 0.7em;">Art by <a href="https://www.deviantart.com/meron25/art/Cafe-Lati-579377956">Meron25</a><br>Background from <a href="https://travel.gaijinpot.com/pokemon-cafe/">Pokémon Café</a></p>
@@ -58,6 +66,7 @@
         </footer>
 
         <script src="darkTheme.js"></script>
+        <script src="toggleElement.js"></script>
     </body>
 
 </html>
