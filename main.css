@@ -163,11 +163,11 @@ img {
 }
 
 .menu li:hover {
-    background-color: dodgerblue;
+    background-color: rgb(255, 230, 195);
 }
 
 .menu li:hover > a {
-    color: white;
+    color: rgb(165, 42, 42);
 }
 
 .hidden {
@@ -234,6 +234,21 @@ section, footer {
     text-align: center;
 }
 
+.sidebyside {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.grid:not(:last-child) {
+    margin-right: 3em;
+    margin-bottom: 0;
+}
+
+.grid {
+    text-align: left;
+}
+
 footer {
     background-image: linear-gradient(45deg, var(--background-color) 50%, var(--background-accent-color) 50%);
     background-size: 10px 10px;
@@ -257,5 +272,18 @@ footer {
 
     .title {
         font-size: clamp(1.2em, calc(10vw), 4em);
+    }
+
+    .sidebyside {
+        flex-direction: column;
+    }
+    
+    .grid:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 1em;
+    }
+
+    .grid {
+        text-align: center;
     }
 }
