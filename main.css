@@ -40,10 +40,6 @@ a {
     text-underline-offset: 0.2em;
 }
 
-img {
-    border: 1px solid black
-}
-
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -258,6 +254,18 @@ footer {
     background-size: 10px 10px;
 }
 
+#sneakpeak {
+    width: 72vw;
+    height: 36vw;
+    margin: 0 auto;
+    background-image: url(sneakpeak-light.png);
+    background-size: cover;
+}
+
+#sneakpeak.dark {
+    background-image: url(sneakpeak-dark.png);
+}
+
 @media (max-width: 699px) {
     .navbar-top li:not(.icon) {
         display: none;
@@ -289,5 +297,9 @@ footer {
 
     .grid {
         text-align: center;
+    }
+
+    #sneakpeak {
+        display: none;
     }
 }
